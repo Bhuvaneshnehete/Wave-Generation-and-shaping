@@ -1,0 +1,97 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tauenvs}[2024/04/10]
+
+%----------------------------------------------------------
+% COLORS
+%----------------------------------------------------------
+
+\RequirePackage{xcolor}
+\definecolor{taublue}{rgb}{0.0,0.4,0.6}
+
+%----------------------------------------------------------
+% TAUENV-, INFO-, NOTE- ENVIRONMENTS
+%----------------------------------------------------------
+
+% Tauenv
+\newmdenv[
+    backgroundcolor=taublue!22, 					
+    linecolor=taublue,									
+    linewidth=0.7pt,
+    frametitle=\vskip0pt\bfseries,
+    frametitlerule=false,
+    frametitlefont=\color{taublue}\bfseries\sffamily,
+    frametitlealignment=\raggedright,
+    innertopmargin=3pt,
+    innerbottommargin=6pt,
+    innerleftmargin=6pt,
+    innerrightmargin=6pt,
+    font=\selectfont,
+    fontcolor=taublue,									
+    frametitleaboveskip=8pt,
+    skipabove=10pt
+]{tauenv}
+
+%----------------------------------------------------------
+
+% Information/Informaci\'on language setup
+\newcommand{\infolanguage}{
+    \iflanguage{spanish}{
+        {\bfseries\noindent Informaci\'on}%
+    }{%
+        {\bfseries\noindent Information}%
+    }%
+}
+
+% Info
+\newmdenv[
+    backgroundcolor=taublue!22, 						
+    linecolor=taublue,									
+    linewidth=0.7pt,
+    frametitle=\vskip0pt\bfseries\infolanguage,
+    frametitlerule=false,
+    frametitlefont=\color{taublue}\bfseries\sffamily,
+    frametitlealignment=\raggedright,
+    innertopmargin=3pt,
+    innerbottommargin=6pt,
+    innerleftmargin=6pt,
+    innerrightmargin=6pt,
+    font=\normalfont,
+    fontcolor=taublue,									
+    frametitleaboveskip=3pt,
+    skipabove=10pt
+]{info}
+
+%----------------------------------------------------------
+
+% Note/Nota language setup
+\newcommand{\notelanguage}{
+    \iflanguage{spanish}{
+        {\bfseries\noindent Nota}%
+    }{%
+        {\bfseries\noindent Note}%
+    }%
+}
+
+% Note
+\newmdenv[
+    backgroundcolor=taublue!22, 						
+    linecolor=taublue,									
+    linewidth=0.7pt,
+    frametitle=\vskip0pt\bfseries\notelanguage,
+    frametitlerule=false,
+    frametitlefont=\color{taublue}\bfseries\sffamily,
+    frametitlealignment=\raggedright,
+    innertopmargin=3pt,
+    innerbottommargin=6pt,
+    innerleftmargin=6pt,
+    innerrightmargin=6pt,
+    font=\normalfont,
+    fontcolor=taublue,									
+    frametitleaboveskip=3pt,
+    skipabove=10pt
+]{note}
+
+%----------------------------------------------------------
+
+\endinput
